@@ -1,6 +1,11 @@
- setInterval(() => { $('#currentDay').text(moment().format('MMMM Do YYYY, H:mm:ss a'));});
+setInterval(() => { $('#currentDay').text(moment().format('MMMM Do YYYY, H:mm:ss a')); });
 
- 
+
+// Storing variables to make the code less redundant below
+var today = moment();
+var hour = moment(today, 'h:mm:ss A').format('HH:mm:ss');
+
+
 // Code for Storing in Local Storage
 init();
 function init() {
@@ -14,7 +19,7 @@ function init() {
     $('#4p').val(localStorage.getItem('4PM', $('#4p').val()));
     $('#5p').val(localStorage.getItem('5PM', $('#5p').val()));
 }
-$('.saveBtn').on("click", function() {
+$('.saveBtn').on("click", function () {
     $('#9a').val(localStorage.setItem('9AM', $('#9a').val()));
     $('#10a').val(localStorage.setItem('10AM', $('#10a').val()));
     $('#11a').val(localStorage.setItem('11AM', $('#11a').val()));
@@ -26,12 +31,11 @@ $('.saveBtn').on("click", function() {
     $('#5p').val(localStorage.setItem('5PM', $('#5p').val()));
     init();
 })
-// End Local Storage Code
 // Code for Color Changer
 timeChanger9();
-function timeChanger9 () {
-    today = moment();
-    var hour = moment(today, 'h:mm:ss A').format('HH:mm:ss');
+function timeChanger9() {
+    today;
+    hour;
     var curHour = $('#9a');
     var hourVal = document.getElementById("9AM").textContent;
     var timeNum = parseInt(hourVal);
@@ -42,11 +46,13 @@ function timeChanger9 () {
         curHour.addClass('present');
     } else if (hourNumber < timeNum) {
         curHour.removeClass('past');
-        curHour.addClass('future');}}
+        curHour.addClass('future');
+    }
+}
 timeChanger10();
-function timeChanger10 () {
-    today = moment();
-    var hour = moment(today, 'h:mm:ss A').format('HH:mm:ss');
+function timeChanger10() {
+    today;
+    hour;
     var curHour = $('#10a');
     var hourVal = document.getElementById("10AM").textContent;
     var timeNum = parseInt(hourVal);
@@ -57,11 +63,13 @@ function timeChanger10 () {
         curHour.addClass('present');
     } else if (hourNumber < timeNum) {
         curHour.removeClass('past');
-        curHour.addClass('future');}}
+        curHour.addClass('future');
+    }
+}
 timeChanger11();
-function timeChanger11 () {
-    today = moment();
-    var hour = moment(today, 'h:mm:ss A').format('HH:mm:ss');
+function timeChanger11() {
+    today;
+    hour;
     var curHour = $('#11a');
     var hourVal = document.getElementById("11AM").textContent;
     var timeNum = parseInt(hourVal);
@@ -72,11 +80,13 @@ function timeChanger11 () {
         curHour.addClass('present');
     } else if (hourNumber < timeNum) {
         curHour.removeClass('past');
-        curHour.addClass('future');}}
+        curHour.addClass('future');
+    }
+}
 timeChanger12();
-function timeChanger12 () {
-    today = moment();
-    var hour = moment(today, 'h:mm:ss A').format('HH:mm:ss');
+function timeChanger12() {
+    today;
+    hour;
     var curHour = $('#12p');
     var hourVal = document.getElementById("12PM").textContent;
     var timeNum = parseInt(hourVal);
@@ -87,11 +97,13 @@ function timeChanger12 () {
         curHour.addClass('present');
     } else if (hourNumber < timeNum) {
         curHour.removeClass('past');
-        curHour.addClass('future');}}
+        curHour.addClass('future');
+    }
+}
 timeChanger1();
-function timeChanger1 () {
-    today = moment();
-    var hour = moment(today, 'h:mm:ss A').format('HH:mm:ss');
+function timeChanger1() {
+    today;
+    hour;
     var curHour = $('#1p');
     var hourVal = document.getElementById("1PM").textContent;
     var timeNum = parseInt(hourVal);
@@ -102,11 +114,13 @@ function timeChanger1 () {
         curHour.addClass('present');
     } else if (hourNumber < timeNum) {
         curHour.removeClass('past');
-        curHour.addClass('future');}}
+        curHour.addClass('future');
+    }
+}
 timeChanger2();
-function timeChanger2 () {
-    today = moment();
-    var hour = moment(today, 'h:mm:ss A').format('HH:mm:ss');
+function timeChanger2() {
+    today;
+    hour;
     var curHour = $('#2p');
     var hourVal = document.getElementById("2PM").textContent;
     var timeNum = parseInt(hourVal);
@@ -117,11 +131,13 @@ function timeChanger2 () {
         curHour.addClass('present');
     } else if (hourNumber < timeNum) {
         curHour.removeClass('past');
-        curHour.addClass('future');}}
+        curHour.addClass('future');
+    }
+}
 timeChanger3();
-function timeChanger3 () {
-    today = moment();
-    var hour = moment(today, 'h:mm:ss A').format('HH:mm:ss');
+function timeChanger3() {
+    today;
+    hour;
     var curHour = $('#3p');
     var hourVal = document.getElementById("3PM").textContent;
     var timeNum = parseInt(hourVal);
@@ -132,11 +148,13 @@ function timeChanger3 () {
         curHour.addClass('present');
     } else if (hourNumber < timeNum) {
         curHour.removeClass('past');
-        curHour.addClass('future');}}
+        curHour.addClass('future');
+    }
+}
 timeChanger4();
-function timeChanger4 () {
-    today = moment();
-    var hour = moment(today, 'h:mm:ss A').format('HH:mm:ss');
+function timeChanger4() {
+    today;
+    hour;
     var curHour = $('#4p');
     var hourVal = document.getElementById("4PM").textContent;
     var timeNum = parseInt(hourVal);
@@ -147,11 +165,13 @@ function timeChanger4 () {
         curHour.addClass('present');
     } else if (hourNumber < timeNum) {
         curHour.removeClass('past');
-        curHour.addClass('future');}}
+        curHour.addClass('future');
+    }
+}
 timeChanger5();
-function timeChanger5 () {
-    today = moment();
-    var hour = moment(today, 'h:mm:ss A').format('HH:mm:ss');
+function timeChanger5() {
+    today;
+    hour;
     var curHour = $('#5p');
     var hourVal = document.getElementById("5PM").textContent;
     var timeNum = parseInt(hourVal);
@@ -162,5 +182,6 @@ function timeChanger5 () {
         curHour.addClass('present');
     } else if (hourNumber < timeNum) {
         curHour.removeClass('past');
-        curHour.addClass('future');}}
-// End of Code for Color Changer
+        curHour.addClass('future');
+    }
+}
